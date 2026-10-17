@@ -95,6 +95,49 @@ button,a,input{-webkit-tap-highlight-color:transparent}button{color:inherit}butt
 .page-title{font-size:clamp(28px,3vw,40px);line-height:1.2;letter-spacing:-.6px;margin:8px 0 24px;color:var(--blue)}
 .page-content{background:#fff;border:1px solid #e9e9e9;border-radius:var(--radius);padding:32px clamp(20px,4vw,48px);font-size:16px;line-height:1.7}
 .page-content a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}.page-content h2,.page-content h3{line-height:1.25}.page-content img{height:auto;border-radius:14px}
+ 
+.blog-hero{position:relative;overflow:hidden;isolation:isolate;border-radius:31px;padding:48px 9%;color:#fff;background:radial-gradient(ellipse at 86% 110%,#0055ed 0,transparent 62%),linear-gradient(120deg,var(--blue-dark),var(--blue))}
+.blog-hero::after{position:absolute;content:"";width:360px;height:360px;right:-40px;top:-210px;border:45px solid #3dcaff20;border-radius:50%;pointer-events:none;z-index:-1}
+.blog-hero h1{margin:0 0 12px;font-size:clamp(28px,3.2vw,44px);line-height:1.1;letter-spacing:-.8px}.blog-hero h1 span{color:var(--cyan)}
+.blog-intro{margin:0;max-width:620px;font-size:17px;line-height:1.55;color:#ffffffd9}
+.blog-list{margin-top:32px}.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.blog-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;background:#fff;border:1px solid #ebebeb;border-radius:30px;box-shadow:0 2px 3px #00000006;transition:border-color .18s,transform .18s,box-shadow .18s}
+.blog-card:hover{transform:translateY(-3px);border-color:#a5b4fb;box-shadow:0 7px 18px #0019b90b}
+.blog-card-media{display:block;aspect-ratio:16/9;background:var(--blue-dark)}.blog-card-media img{width:100%;height:100%;object-fit:cover}
+.blog-card-body{display:flex;flex-direction:column;gap:10px;flex:1;padding:22px 24px 20px;font-family:'DM Sans',Roboto,sans-serif}
+.blog-category{display:inline-block;width:fit-content;margin:0;padding:5px 14px;background:#eef2ff;color:var(--blue);border-radius:5px;font-size:11px;line-height:14px;font-weight:700;letter-spacing:.6px;text-transform:uppercase}
+.blog-card-title{margin:0;font-size:21px;line-height:1.25;letter-spacing:-.3px}.blog-card-title a:hover{color:var(--blue)}
+.blog-card-summary{margin:0;font-size:15px;line-height:1.55;color:#4b5563;flex:1}
+.blog-meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0;font-size:12px;color:#6b7280}.blog-meta span+span::before{content:"·";margin-right:14px;color:#c0c6d0}.blog-meta span:empty{display:none}
+.blog-read{padding-left:0;margin-top:2px}
+ 
+.blog-card:first-child{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
+.blog-card:first-child .blog-card-media{aspect-ratio:auto;min-height:100%}.blog-card:first-child .blog-card-body{justify-content:center;padding:36px 40px}
+.blog-card:first-child .blog-card-title{font-size:clamp(24px,2.3vw,32px)}.blog-card:first-child .blog-card-summary{flex:0;font-size:16px}
+.blog-cta,.article-related{margin-top:40px}
+.blog-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 36px;background:#fff;border:1px solid #ccc;border-radius:22px;box-shadow:1px 3px 4px #00000006}
+.blog-cta h2{margin:0 0 6px;font-size:22px;color:var(--blue)}.blog-cta p{margin:0;font-size:15px;line-height:1.5;color:#4b5563}.blog-cta-button{flex:none;font-family:'DM Sans',Roboto,sans-serif;padding-inline:22px}
+
+.breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 22px;font-size:13px;color:#6b7280}.breadcrumb a{color:var(--blue)}.breadcrumb a:hover{text-decoration:underline;text-underline-offset:3px}.breadcrumb [aria-current]{color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:min(520px,100%)}
+.article-header{max-width:860px}.article-header h1{margin:14px 0 14px;font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-1px}
+.article-intro{margin:0 0 16px;font-size:19px;line-height:1.55;color:#4b5563}
+.article-cover{margin:28px 0 0;border-radius:31px;overflow:hidden;background:var(--blue-dark)}.article-cover img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.article-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:48px;align-items:start;margin-top:36px}
+.article-body{background:#fff;border:1px solid #ebebeb;border-radius:30px;padding:40px clamp(22px,4vw,56px);font-size:17px;line-height:1.75;color:#2b3442}
+.article-body>:first-child{margin-top:0}.article-body h2{margin:36px 0 12px;font-size:26px;line-height:1.25;letter-spacing:-.4px;color:var(--ink)}.article-body h3{margin:28px 0 10px;font-size:20px;line-height:1.3;color:var(--blue)}
+.article-body p{margin:0 0 18px}.article-body ul,.article-body ol{margin:0 0 20px;padding-left:22px}.article-body li{margin-bottom:8px}.article-body li::marker{color:var(--blue)}
+.article-body a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}.article-body strong,.article-body b{color:var(--ink)}
+.article-body blockquote{margin:24px 0;padding:18px 24px;border-left:4px solid var(--cyan);background:#f0f9ff;border-radius:0 14px 14px 0;font-size:18px}
+.article-aside{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+.article-summary{background:#fff;border:1px solid #ebebeb;border-radius:22px;padding:24px;font-family:'DM Sans',Roboto,sans-serif}.article-summary h2{margin:0 0 14px;font-size:17px}.article-summary .plan-features li{font-size:14px;line-height:1.45;margin-bottom:10px}
+.article-cta{position:relative;overflow:hidden;padding:26px 24px;border-radius:22px;color:#fff;background:radial-gradient(ellipse at 86% 110%,#0055ed 0,transparent 62%),linear-gradient(120deg,var(--blue-dark),var(--blue))}
+.article-cta h2{margin:0 0 8px;font-size:21px;line-height:1.2}.article-cta p:not(.slide-eyebrow){margin:0 0 18px;font-size:14px;line-height:1.55;color:#ffffffd9}
+.article-related h2{margin:0 0 16px;font-size:24px}.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.related-card{display:flex;flex-direction:column;gap:10px;padding:22px 24px;background:#fff;border:1px solid #e9e9e9;border-radius:22px;transition:border-color .18s,transform .18s}.related-card:hover{transform:translateY(-3px);border-color:#a5b4fb}.related-card strong{font-size:17px;line-height:1.35}.related-card .plan-detail{padding-left:0;margin-top:auto}
+.article-related:not(:has(.related-card)),.article-summary:not(:has(li)),.blog-cta:not(:has(h2:not(:empty))){display:none}
+@media(max-width:1050px){.blog-grid,.related-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.article-layout{grid-template-columns:1fr;gap:24px}.article-aside{position:static;display:grid;grid-template-columns:1fr 1fr}}
+@media(max-width:767px){.blog-hero{padding:30px 24px;border-radius:23px}.blog-intro{font-size:15px}.blog-grid,.related-grid{grid-template-columns:1fr;gap:18px}.blog-card,.blog-card:first-child{display:flex;border-radius:25px}.blog-card:first-child .blog-card-media{aspect-ratio:16/9;min-height:0}.blog-card:first-child .blog-card-body,.blog-card-body{padding:20px}
+.blog-cta{flex-direction:column;align-items:flex-start;padding:22px}.article-intro{font-size:16px}.article-cover{border-radius:23px;margin-top:20px}.article-body{padding:26px 20px;border-radius:25px;font-size:16px}.article-body h2{font-size:22px}.article-aside{grid-template-columns:1fr}}
 </style><meta name="theme-color" content="#0019b9"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
@@ -195,7 +238,7 @@ button,a,input{-webkit-tap-highlight-color:transparent}button{color:inherit}butt
   <section class="services" aria-labelledby="bienvenida">
     <h1 class="welcome" id="bienvenida">Esto es de la clase de Appland <span>Honduras</span><sup><a href="#fuente-marca" aria-label="Ver atribución del mensaje de marca">*</a></sup></h1>
     <div class="service-grid">
-      <a class="service-card" href="https://www.tigo.com.hn/prepago"><img src="https://media.stronglify.com/12/super-recargas-32ff1bf959-1792259710.svg" alt="" width="27" height="27"/><span>Super Recarga</span></a><a class="service-card" href="https://www.tigo.com.hn/planes"><img src="https://media.stronglify.com/12/ic-residencial-be57ff5219-1792259722.svg" alt="" width="27" height="27"/><span>Servicios Residenciales</span></a><a class="service-card" href="https://www.tigo.com.hn/postpago"><img src="https://media.stronglify.com/12/mobile-85e8626ffc-1792259727.svg" alt="" width="27" height="27"/><span>Postpago</span></a><a class="service-card" href="https://www.tigo.com.hn/tigo-total"><img src="https://media.stronglify.com/12/full-hogar-59b8b772fd-1792259706.svg" alt="" width="27" height="27"/><span>Tigo Total</span></a><a class="service-card" href="https://mi.tigo.com.hn/pago-express/facturas"><img src="https://media.stronglify.com/12/factura-2-lempiras-0b5dc79521-1792259705.svg" alt="" width="27" height="27"/><span>Pagar Facturas</span></a><a class="service-card" href="https://www.tigo.com.hn/tigo-chip"><img src="https://media.stronglify.com/12/chip-tigo-blue-c6576f59b6-1792259703.svg" alt="" width="27" height="27"/><span>Tigo Chip</span></a>
+      <a class="service-card" href="https://www.tigo.com.hn/planes"><img src="https://media.stronglify.com/12/ic-residencial-be57ff5219-1792259722.svg" alt="" width="27" height="27"/><span>Servicios Residenciales</span></a><a class="service-card" href="https://www.tigo.com.hn/prepago"><img src="https://media.stronglify.com/12/super-recargas-32ff1bf959-1792259710.svg" alt="" width="27" height="27"/><span>Super Recarga</span></a><a class="service-card" href="https://www.tigo.com.hn/postpago"><img src="https://media.stronglify.com/12/mobile-85e8626ffc-1792259727.svg" alt="" width="27" height="27"/><span>Postpago</span></a><a class="service-card" href="https://www.tigo.com.hn/tigo-total"><img src="https://media.stronglify.com/12/full-hogar-59b8b772fd-1792259706.svg" alt="" width="27" height="27"/><span>Tigo Total</span></a><a class="service-card" href="https://mi.tigo.com.hn/pago-express/facturas"><img src="https://media.stronglify.com/12/factura-2-lempiras-0b5dc79521-1792259705.svg" alt="" width="27" height="27"/><span>Pagar Facturas</span></a><a class="service-card" href="https://www.tigo.com.hn/tigo-chip"><img src="https://media.stronglify.com/12/chip-tigo-blue-c6576f59b6-1792259703.svg" alt="" width="27" height="27"/><span>Tigo Chip</span></a>
     </div>
     <div class="quick-actions">
       <a class="quick-card" href="https://mi.tigo.com.hn/"><img src="https://media.stronglify.com/12/mi-tigo-3fbf838be0-1792259708.svg" alt="" width="91" height="91"/><div><p>Ingresa a <strong>Mi Tigo</strong> y gestiona tus servicios fácil y rápido</p><small>Paga tu factura, recarga y consulta consumos desde tu celular. 📱</small></div></a><a class="quick-card" href="https://api.whatsapp.com/send?phone=50494385253&amp;text=Quiero%20solicitar%20una%20eSIM"><img src="https://media.stronglify.com/12/icono-e-sim-5fedcd9372-1792259707.svg" alt="" width="91" height="91"/><div><p>Activa tu eSIM por WhatsApp <strong>AQUÍ</strong> </p><small>Sin tiendas, sin esperas, solo WhatsApp. 📱</small></div></a>
@@ -212,7 +255,7 @@ button,a,input{-webkit-tap-highlight-color:transparent}button{color:inherit}butt
         <div class="plan-heading">
           <div class="plan-badge-slot"><span class="plan-badge">2 Cajas TV</span></div>
           <h3 class="plan-name">Tigo Total</h3>
-          <p class="plan-amount">150MB + 40GB</p>
+          <p class="plan-amount">160MB + 40GB</p>
           <p class="plan-previous" data-valor="">Antes <s></s></p>
           <p class="plan-price">L1,100</p>
           <p class="plan-tax">Incluye ISV</p>
